@@ -1,0 +1,33 @@
+<MainLayout>:
+    orientation:'horizontal'
+
+    # Variables
+    text_label: text_item # This can be accessed in self.text_label.text
+    button_text: button_item
+
+    BoxLayout:
+        size_hint_x: 0.5
+    BoxLayout:
+        size_hint_x: 2
+        orientation: 'vertical'
+        Label:
+            size_hint_y:1
+        Label:
+            id: text_item
+            size_hint_y:4
+            font_size: 25
+            text_size: self.size
+            size: self.texture_size
+            halign: 'center'
+            valign: 'middle'
+            text: ''
+        Button:
+            id: button_item
+            text: 'Start to Listen'
+            size_hint_y: 1
+            on_release: root.listen()
+        Label:
+            size_hint_y:1
+
+    BoxLayout:
+        size_hint_x: 0.5
