@@ -10,7 +10,7 @@ import sys
 import threading
 
 interrupted = False
-model='./jarvis.pmdl'
+model='./Icarus.pmdl'
 
 def signal_handler(signal, frame):
     global interrupted
